@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #232323;
+$secondary: #34d399;
+$tertiary: #bbbbbb;
+$input-text-color: #FFF;
+
+
+body {
+  margin: 0;
+  background: #232323;
+  font-family: "Roboto Thin", sans-serif;
+  color: #34d399;
+  height: 100dvh;
+  width: 100dvw;
+
+  > * {
+    box-sizing: border-box;
+  }
+
+  input, select, button {
+    background: $primary;
+    border: 1px solid $secondary;
+  }
+
+  button {
+    color: $secondary;
+  }
+
+  input, select {
+    border-radius: 0.75rem;
+    color: $input-text-color;
+  }
+}

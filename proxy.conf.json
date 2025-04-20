@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://big-xyt.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

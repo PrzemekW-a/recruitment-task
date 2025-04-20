@@ -1,0 +1,34 @@
+:host {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.timestamp-label {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.play-btn {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+

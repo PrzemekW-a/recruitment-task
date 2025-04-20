@@ -1,0 +1,32 @@
+<h1>Order book</h1>
+<div class="navbar">
+  <label for="timeSelect">Select time:</label>
+  <select id="timeSelect"
+          [disabled]="isPlaying()"
+          [ngModel]="selectedTimestamp()"
+          (change)="onTimestampChange($event)">
+    @for (time of availableTimestamps(); track time) {
+      <option [value]="time">
+        {{ time }}
+      </option>
+    }
+  </select>
+
+  @if (availableTimestamps().length > 1) {
+    <button class="play-btn" (click)="playAllSnapshots()">
+      {{ isPlaying() ? '❚❚' : '▶' }}
+    </button>
+  }
+</div>
+
+<hr>
+
+@if (!!currentSnapshotData()) {
+  <h2 class="timestamp-label">Data for {{ currentSnapshotData()?.timestamp }}</h2>
+
+  <main class="main-container">
+    <app-chart [chartData]="currentSnapshotData()!"></app-chart>
+  </main>
+} @else {
+  <p>No time selected</p>
+}
